@@ -1,6 +1,10 @@
-# app
+# Primeiro app feito com Flutter
 
-A new Flutter project.
+## DS403
+
+Projetinho basico apenas para treinar como funciona a navegação no flutter e como posicionar elementos como
+imagens e textos
+
 
 ## Getting Started
 
