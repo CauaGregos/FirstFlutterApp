@@ -24,7 +24,7 @@ class _HomeState extends State<Home> {
   static const TextStyle _styleOption =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
-  static List<Widget> _wgOptions = <Widget>[
+  static List<Widget> _wgOptions = <Widget>[// lista para traalhar em conjunto com o indexador 
     Tela1(),Tela2(),Tela3()
   ];
 
@@ -32,6 +32,7 @@ class _HomeState extends State<Home> {
 
   void _onItemTapped(int index) {
     setState(() {
+      //seta meu novo estado para o contexto atual
       _selectedIndex = index;
     });
   }
@@ -43,7 +44,8 @@ class _HomeState extends State<Home> {
       body: Center(
         child: _wgOptions.elementAt(_selectedIndex),
       ),
-      bottomNavigationBar: BottomNavigationBar(
+      
+      bottomNavigationBar: BottomNavigationBar(// meu TabNav que indica para qual contexto vamos
         items: [
           Listas.items.elementAt(0),
           Listas.items.elementAt(1),
@@ -51,7 +53,7 @@ class _HomeState extends State<Home> {
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[900],
-        onTap: _onItemTapped,
+        onTap: _onItemTapped,// função ao clicar nos botões do TabNav
       ),
     );
   }
